@@ -1,1 +1,1 @@
-# kk
+# Kauno Kolegijos darbai
