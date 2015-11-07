@@ -1,23 +1,23 @@
-#include "stdafx.h"
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+//Dominykas Litvaitis INF 5
+//Yra keistenybe, kadangi is gautu neigiamu skaiciu yra traukiama saknis, kai x = -1 ir x = 1
 
-//reikia is schema, komentarai su pagrindimu kintamuju tipais
-//rekes worde, tikla, uzdaviniai, paziureti moodle gal.
+#include <iostream>  //Kad galetume naudoti pagrindines c++ kalbos dalis
+#include <cmath>     //Kad galetume naudoti pow
 
-using namespace std;
+using namespace std; //Naudojame, kad nereiketu rasyti std:: prie spausdinimo komandos
 
-void main(){
-	double y;
-	double t;
-	double x = -1;
-	int h = 1;
+int main(){
+	double y;        //Musu ieskoma reiksme
+	double t;        
+	double x = -1;   //Kintamasis, kuris kinta h zingsniu
+	int h = 1;       
+
 	do{
-		t = (sqrt(pow(sin(x), 2))) / (x - 2);
-		y = sqrt(2 * t + x);
-		cout << "y = " << y << endl;
-		x += h;
-	} while (x <= 1);
-	while (1);
+		t = (sqrt(pow(sin(x), 2))) / (x - 2);   //Surandame t reiksme
+		y = sqrt(2 * t + x);                    //Naudojant gauta t reiksme, surandame y
+		cout << "y = " << y << endl;            //Isspausdiname y
+		x += h;                                 //Prie x pridedame h (h = 1)
+	} while (x <= 1);                           //Darome cikla iki kada x bus lygus 2
+	
+	while (1);       //Naudojame cikla, kad programa iskarto neuzsidarytu
 }
